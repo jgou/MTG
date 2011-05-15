@@ -1,22 +1,20 @@
-<html>
-<body>
-<table col="2">
+<table>
 <% @cards.each do |card| %>
 <% if card.nil? then %>
-<td colspan="2">There are no elements in the collection</td>
+<tr colspan="2">There are no elements in the collection</tr>
 <% else %>
-<td>
-<tr>Name: <%=card.name%></tr>
-<tr>Copies: 
+<tr>
+<td>Name: <%=card.name%></td>
+<td>Copies: 
 <% if card.inventory.nil? then %>
 0
 <% else %>
 <%=card.inventory.copies%>
 <% end %>
-</tr>
 </td>
+</tr>
 <% end %>
 <% end %>
 </table>
-</body>
-</html>
+
+<%= link_to 'New card', new_card_path %>

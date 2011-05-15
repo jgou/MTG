@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :expansions
+
+  map.resources :blocks
+
   map.resources :inventories
 
   map.resources :cards

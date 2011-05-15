@@ -9,15 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110514194017) do
+ActiveRecord::Schema.define(:version => 20110515145416) do
 
   create_table "blocks", :force => true do |t|
-    t.string   "name",       :limit => 80, :null => false
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "cards", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "expansions", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
