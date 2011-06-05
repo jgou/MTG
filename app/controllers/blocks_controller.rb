@@ -1,4 +1,6 @@
 class BlocksController < ApplicationController
+	layout 'standard'
+
   # GET /blocks
   # GET /blocks.xml
   def index

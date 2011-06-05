@@ -1,8 +1,8 @@
 class CreateCards < ActiveRecord::Migration
   def self.up
     create_table :cards do |t|
-      t.string :name
-
+      t.string :english_name
+			t.string :spanish_name
       t.timestamps
     end
   end

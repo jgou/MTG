@@ -4,7 +4,8 @@
 <tr colspan="2">There are no elements in the collection</tr>
 <% else %>
 <tr>
-<td>Name: <%=card.name%></td>
+<td><%=card.english_name%></td>
+<td><%=card.spanish_name%></td>
 <td>Copies: 
 <% if card.inventory.nil? then %>
 0
@@ -12,9 +13,11 @@
 <%=card.inventory.copies%>
 <% end %>
 </td>
+<td><%= link_to 'Add', home, :method => add %></td>
 </tr>
 <% end %>
 <% end %>
 </table>
 
 <%= link_to 'New card', new_card_path %>
+<%= link_to 'New inventory', new_inventory_path %>

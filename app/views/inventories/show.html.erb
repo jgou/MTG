@@ -1,3 +1,4 @@
+<h1><%=h @inventory.card.english_name %> / <%=h @inventory.card.spanish_name %></h1>
 <p>
   <b>Copies:</b>
   <%=h @inventory.copies %>
@@ -5,4 +6,5 @@
 
 
 <%= link_to 'Edit', edit_inventory_path(@inventory) %> |
-<%= link_to 'Back', inventories_path %>
+<%= link_to 'Back', inventories_path %> |
+<%= link_to 'Main', root_path %>

@@ -1,0 +1,12 @@
+<h1>Editing expansion_of_card</h1>
+
+<% form_for(@expansion_of_card) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @expansion_of_card %> |
+<%= link_to 'Back', expansion_of_cards_path %>

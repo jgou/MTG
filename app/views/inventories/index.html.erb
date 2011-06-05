@@ -7,6 +7,8 @@
 
 <% for inventory in @inventories %>
   <tr>
+		<td><%=h inventory.card.english_name %></td>
+		<td><%=h inventory.card.spanish_name %></td>
     <td><%=h inventory.copies %></td>
     <td><%= link_to 'Show', inventory %></td>
     <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>

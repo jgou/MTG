@@ -1,4 +1,6 @@
 class ExpansionsController < ApplicationController
+	layout 'standard'
+
   # GET /expansions
   # GET /expansions.xml
   def index

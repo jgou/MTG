@@ -1,0 +1,20 @@
+<h1>Listing expansion_of_cards</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for expansion_of_card in @expansion_of_cards %>
+  <tr>
+		<td><%=h Card.find(expansion_of_card.card_id).name %></td>
+		<td><%=h Expansion.find(expansion_of_card.expansion_id).name%></td>
+    <td><%= link_to 'Show', expansion_of_card %></td>
+    <td><%= link_to 'Edit', edit_expansion_of_card_path(expansion_of_card) %></td>
+    <td><%= link_to 'Destroy', expansion_of_card, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New expansion_of_card', new_expansion_of_card_path %>

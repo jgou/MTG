@@ -2,11 +2,24 @@
 
 <% form_for(@expansion) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
+	<table>
+	<tr>
+  <td>
+    <%= f.label :block_id %>
+	</td>
+	<td>
+   	<%= collection_select(:expansion, :block_id, Block.all, :id, :name) %>
+	</td>
+  </tr>
+	<tr>
+  <td>
+    <%= f.label :name %>
+	</td>
+	<td>
     <%= f.text_field :name %>
-  </p>
+	</td>
+  </tr>
+	<table>
   <p>
     <%= f.submit "Create" %>
   </p>

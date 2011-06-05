@@ -2,11 +2,24 @@
 
 <% form_for(@inventory) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :copies %><br />
+	<table>
+	<tr>
+  <td>
+    <%= f.label :card_id %>
+	</td>
+	<td>
+   	<%= collection_select(:inventory, :card_id, Card.all, :id, :spanish_name) %>
+	</td>
+  </tr>
+	<tr>
+  <td>
+    <%= f.label :copies %>
+	</td>
+	<td>
     <%= f.text_field :copies %>
-  </p>
+	</td>
+  </tr>
+	<table>
   <p>
     <%= f.submit "Update" %>
   </p>

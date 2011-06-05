@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110515145416) do
+ActiveRecord::Schema.define(:version => 20110521175745) do
 
   create_table "blocks", :force => true do |t|
     t.string   "name"
@@ -18,13 +18,22 @@ ActiveRecord::Schema.define(:version => 20110515145416) do
   end
 
   create_table "cards", :force => true do |t|
-    t.string   "name"
+    t.string   "english_name"
+    t.string   "spanish_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "expansion_of_cards", :force => true do |t|
+    t.integer  "card_id",      :null => false
+    t.integer  "expansion_id", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "expansions", :force => true do |t|
     t.string   "name"
+    t.integer  "block_id",   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
